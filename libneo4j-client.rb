@@ -1,8 +1,8 @@
 class Libneo4jClient < Formula
   desc "Shell client and C driver for Neo4j"
   homepage "https://cleishm.github.com/libneo4j-client"
-  url "https://github.com/cleishm/libneo4j-client/releases/download/v0.3.1/libneo4j-client-0.3.1.tar.gz"
-  sha256 "a7f5efedfdf4ad3af69f683aac9e608844379179084d999e8488a18fc6ecf7ec"
+  url "https://github.com/cleishm/libneo4j-client/releases/download/v0.4.0/libneo4j-client-0.4.0.tar.gz"
+  sha256 "84a53f667059ac3112d3a15c184d21c83c790cf700bf35b04ea80132d3a8cde3"
 
   head do
     url "https://github.com/cleishm/libneo4j-client.git"
@@ -21,9 +21,8 @@ class Libneo4jClient < Formula
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
-                          "--prefix=#{prefix}",
-                          "LDFLAGS=-L#{Formula["openssl"].opt_prefix}",
-                          "CPPFLAGS=-I#{Formula["openssl"].opt_prefix}"
+                          "--with-libs=#{Formula["openssl"].opt_prefix}",
+                          "--prefix=#{prefix}"
     system "make", "install"
   end
 
