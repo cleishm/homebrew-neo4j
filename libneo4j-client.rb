@@ -1,8 +1,8 @@
 class Libneo4jClient < Formula
   desc "Shell client and C driver for Neo4j"
   homepage "https://cleishm.github.io/libneo4j-client/"
-  url "https://github.com/cleishm/libneo4j-client/releases/download/v0.8.0/libneo4j-client-0.8.0.tar.gz"
-  sha256 "5677d730710a6b1271abf980a9ff3ebcf16d9e6d5d88ce937b3784359c6b53f8"
+  url "https://github.com/cleishm/libneo4j-client/releases/download/v0.8.1/libneo4j-client-0.8.1.tar.gz"
+  sha256 "3df3f2caab199b84aa6c114e93ce937216316968e114b2653ccec1030867d3eb"
 
   head do
     url "https://github.com/cleishm/libneo4j-client.git"
@@ -42,6 +42,6 @@ class Libneo4jClient < Formula
         }
     EOS
     system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lneo4j-client", "-o", "test"
-    system "./test | grep 'hello world'"
+    assert_match "hello world", shell_output("./test")
   end
 end
