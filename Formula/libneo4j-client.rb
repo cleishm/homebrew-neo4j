@@ -21,6 +21,7 @@ class Libneo4jClient < Formula
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
+                          "--disable-thread-local-iovectors",
                           "--with-libs=#{Formula["openssl"].opt_prefix}",
                           "--prefix=#{prefix}"
     system "make", "install"
