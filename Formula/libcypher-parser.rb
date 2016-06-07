@@ -1,8 +1,8 @@
 class LibcypherParser < Formula
   desc "C parsing library and command line linter for the Cypher Query Language"
   homepage "https://cleishm.github.io/libcypher-parser/"
-  url "https://github.com/cleishm/libcypher-parser/releases/download/v0.3.0/libcypher-parser-0.3.0.tar.gz"
-  sha256 "b04cc5159ade02794378819176cd5662ea86f1fc0defb4ee3e09df3453dd84ab"
+  url "https://github.com/cleishm/libcypher-parser/releases/download/v0.3.1/libcypher-parser-0.3.1.tar.gz"
+  sha256 "ddae2feda572f8f379440e53addad5144d4f37861268084672af6e97b5fb1c17"
 
   head do
     url "https://github.com/cleishm/libcypher-parser.git"
