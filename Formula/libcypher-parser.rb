@@ -1,8 +1,8 @@
 class LibcypherParser < Formula
   desc "C parsing library and command line linter for the Cypher Query Language"
   homepage "https://cleishm.github.io/libcypher-parser/"
-  url "https://github.com/cleishm/libcypher-parser/releases/download/v0.2.1/libcypher-parser-0.2.1.tar.gz"
-  sha256 "52a5c3dd6cfab9dc4fe0a598109ac08de30a8028520bedd1bc9caa3747fd1d76"
+  url "https://github.com/cleishm/libcypher-parser/releases/download/v0.3.0/libcypher-parser-0.3.0.tar.gz"
+  sha256 "b04cc5159ade02794378819176cd5662ea86f1fc0defb4ee3e09df3453dd84ab"
 
   head do
     url "https://github.com/cleishm/libcypher-parser.git"
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
 
-    printf("Parsed %d AST nodes\n", cypher_parse_result_node_count(result));
+    printf("Parsed %d AST nodes\n", cypher_parse_result_nnodes(result));
     cypher_parse_result_free(result);
     return 0;
 }
