@@ -1,8 +1,8 @@
 class Libneo4jClient < Formula
   desc "Shell client and C driver for Neo4j"
   homepage "https://cleishm.github.io/libneo4j-client/"
-  url "https://github.com/cleishm/libneo4j-client/releases/download/v0.9.2/libneo4j-client-0.9.2.tar.gz"
-  sha256 "85ddad14de8143d15be83322015550ecf8dd8174541a7961409fc89cacc17706"
+  url "https://github.com/cleishm/libneo4j-client/releases/download/v1.0.0/libneo4j-client-1.0.0.tar.gz"
+  sha256 "6dd76cab31c5b46b69742255b6379d1cb0997eddf27211382f0256747d5c1697"
 
   head do
     url "https://github.com/cleishm/libneo4j-client.git"
@@ -14,6 +14,7 @@ class Libneo4jClient < Formula
   end
 
   depends_on "pkg-config" => :build
+  depends_on "cleishm/neo4j/libcypher-parser"
   depends_on "openssl"
 
   def install
