@@ -1,8 +1,8 @@
 class Libneo4jClient < Formula
   desc "Shell client and C driver for Neo4j"
   homepage "https://cleishm.github.io/libneo4j-client/"
-  url "https://github.com/cleishm/libneo4j-client/releases/download/v2.1.1/libneo4j-client-2.1.1.tar.gz"
-  sha256 "4fced5139cba3a9f54d911e787bfd293dc7c62d48e333e61640bd2ed459e6afc"
+  url "https://github.com/cleishm/libneo4j-client/releases/download/v2.1.2/libneo4j-client-2.1.2.tar.gz"
+  sha256 "e1a07f0ed62a5ffdeedceaf036a422ca73faa4d250d0dd1499034ca901a7c6e3"
 
   head do
     url "https://github.com/cleishm/libneo4j-client.git"
