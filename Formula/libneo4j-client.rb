@@ -16,13 +16,14 @@ class Libneo4jClient < Formula
   depends_on "pkg-config" => :build
   depends_on "cleishm/neo4j/libcypher-parser"
   depends_on "openssl"
+  depends_on "libedit"
 
   def install
     system "./autogen.sh" if build.head?
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
-                          "--with-libs=#{Formula["openssl"].opt_prefix}",
+                          "--with-libs=#{Formula["openssl"].opt_prefix}:#{Formula["libedit"].opt_prefix}",
                           "--prefix=#{prefix}"
     system "make", "install"
   end
