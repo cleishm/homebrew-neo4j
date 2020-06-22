@@ -5,7 +5,7 @@ class LibcypherParser < Formula
   sha256 "4a7845c5892ca930fe163be2b42c01627ba95ac8cbc64eb17faf5c60c1a4473a"
 
   head do
-    url "https://github.com/cleishm/libcypher-parser.git"
+    url "https://github.com/cleishm/libcypher-parser.git", :branch => 'main'
 
     depends_on "automake" => :build
     depends_on "autoconf" => :build

@@ -5,7 +5,7 @@ class Libneo4jClient < Formula
   sha256 "fb7f959f37d52c7b4b69a87d59f314e6a17c410cc55cae842234282eb0bfaf35"
 
   head do
-    url "https://github.com/cleishm/libneo4j-client.git"
+    url "https://github.com/cleishm/libneo4j-client.git", :branch => "main"
 
     depends_on "automake" => :build
     depends_on "autoconf" => :build
